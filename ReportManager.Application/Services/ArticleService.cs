@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using ReportManager.Application.DTOs;
 using ReportManager.Application.Interfaces;
 using ReportManager.Domain.Entities;

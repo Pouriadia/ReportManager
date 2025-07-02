@@ -1,5 +1,3 @@
-using System;
-
 namespace ReportManager.Application.DTOs
 {
     /// <summary>

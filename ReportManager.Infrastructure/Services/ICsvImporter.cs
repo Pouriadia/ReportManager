@@ -1,5 +1,3 @@
-using System.IO;
-
 namespace ReportManager.Infrastructure.Services
 {
     /// <summary>

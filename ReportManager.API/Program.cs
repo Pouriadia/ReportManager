@@ -4,14 +4,12 @@ using ReportManager.Application.Interfaces;
 using ReportManager.Infrastructure.Repositories;
 using ReportManager.Application.Services;
 using ReportManager.Infrastructure.Services;
-using AutoMapper;
-using ReportManager.API.Mapping;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // --- Existing ---  
-builder.Services.AddEndpointsApiExplorer();  
-builder.Services.AddSwaggerGen();  
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
 
 // --- Your additions ---  
 builder.Services.AddDbContext<NewsDbContext>(options =>
@@ -19,20 +17,18 @@ builder.Services.AddDbContext<NewsDbContext>(options =>
         builder.Configuration.GetConnectionString("DefaultConnection"),
         sql => sql.MigrationsAssembly("ReportManager.Infrastructure")));
 
-builder.Services.AddScoped<IArticleRepository, ArticleRepository>();  
-builder.Services.AddScoped<IReporterRepository, ReporterRepository>();  
+builder.Services.AddScoped<IArticleRepository, ArticleRepository>();
+builder.Services.AddScoped<IReporterRepository, ReporterRepository>();
 
-builder.Services.AddScoped<IArticleService, ArticleService>();  
-builder.Services.AddScoped<IReporterService, ReporterService>();  
+builder.Services.AddScoped<IArticleService, ArticleService>();
+builder.Services.AddScoped<IReporterService, ReporterService>();
 
-builder.Services.AddScoped<IPersianDateConverter, PersianDataConverter>();  
-builder.Services.AddScoped<ICsvImporter, CsvImporter>();  
+builder.Services.AddScoped<IPersianDateConverter, PersianDataConverter>();
+builder.Services.AddScoped<ICsvImporter, CsvImporter>();
 
 builder.Services.AddScoped<ISourceDataImporter, SourceDataImporter>();
 
-builder.Services.AddAutoMapper(typeof(MappingProfile).Assembly);  
-
-builder.Services.AddControllers();    // <-- make sure controllers are registered  
+builder.Services.AddControllers();     
 
 var app = builder.Build();
 
@@ -45,6 +41,7 @@ using (var scope = app.Services.CreateScope())
 }
 
 
+// For Running Unit & Integration Tests
 // using (var scope = app.Services.CreateScope())
 // {
 //     var db = scope.ServiceProvider.GetRequiredService<NewsDbContext>();
@@ -59,10 +56,10 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();  
 }
 
-app.UseHttpsRedirection();  
+app.UseHttpsRedirection();
 
-app.UseAuthorization();               // <-- enable authorization middleware  
+app.UseAuthorization();
 
-app.MapControllers();                 // <-- map attribute-routed controllers  
+app.MapControllers();
 
 app.Run();

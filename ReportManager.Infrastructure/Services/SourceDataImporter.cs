@@ -1,10 +1,5 @@
-using System.Globalization;
-using System.IO;
-using System.Linq;
-using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using ReportManager.Application.Interfaces;
-using ReportManager.Domain.Entities;
 using ReportManager.Infrastructure.Data;
 
 namespace ReportManager.Infrastructure.Services

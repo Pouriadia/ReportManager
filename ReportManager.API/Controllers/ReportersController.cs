@@ -1,7 +1,4 @@
-using System;
-using System.Collections.Generic;
 using Microsoft.AspNetCore.Mvc;
-using ReportManager.Application.DTOs;
 using ReportManager.Application.Services;
 using ReportManager.API.DTOs;
 

@@ -1,6 +1,4 @@
-using System;
 using System.Globalization;
-using ReportManager.Application.Interfaces;
 
 namespace ReportManager.Infrastructure.Services
 {

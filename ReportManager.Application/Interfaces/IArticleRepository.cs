@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using ReportManager.Domain.Entities;
 
 namespace ReportManager.Application.Interfaces

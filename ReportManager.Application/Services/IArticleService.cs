@@ -1,5 +1,3 @@
-using System;
-using System.Collections.Generic;
 using ReportManager.Application.DTOs;
 
 namespace ReportManager.Application.Services

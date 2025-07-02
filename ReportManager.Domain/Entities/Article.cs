@@ -1,4 +1,3 @@
-using System;
 using ReportManager.Domain.Interfaces;
 
 namespace ReportManager.Domain.Entities

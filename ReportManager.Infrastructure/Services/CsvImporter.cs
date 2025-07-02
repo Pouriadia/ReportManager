@@ -1,12 +1,8 @@
-using System;
 using System.Globalization;
-using System.IO;
-using System.Linq;
 using CsvHelper;
 using CsvHelper.Configuration;
 using ReportManager.Domain.Entities;
 using ReportManager.Infrastructure.Data;
-using Microsoft.EntityFrameworkCore;
 
 namespace ReportManager.Infrastructure.Services
 {
